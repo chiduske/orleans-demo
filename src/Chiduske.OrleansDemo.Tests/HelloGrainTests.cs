@@ -1,23 +1,26 @@
 ﻿using Chiduske.OrleansDemo.GrainInterfaces;
+using Chiduske.OrleansDemo.Tests.Fixtures;
 using FluentAssertions;
 using Orleans.TestingHost;
 using Xunit;
 
 namespace Chiduske.OrleansDemo.Tests;
 
+[Collection(ClusterCollection.Name)]
 public class HelloGrainTests
 {
+    private readonly TestCluster _cluster;
+
+    public HelloGrainTests(ClusterFixture fixture)
+    {
+        _cluster = fixture.Cluster;
+    }
+
     [Fact]
     public async Task SaysHelloCorrectly()
     {
-        var builder = new TestClusterBuilder();
-        var cluster = builder.Build();
-        await cluster.DeployAsync();
-
-        var hello = cluster.GrainFactory.GetGrain<IHello>(0);
+        var hello = _cluster.GrainFactory.GetGrain<IHello>(0);
         var greeting = await hello.SayHello("Hi there!");
-        
-        await cluster.StopAllSilosAsync();
 
         greeting.Should().Be("Hello, World");
     }
