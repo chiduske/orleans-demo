@@ -16,6 +16,6 @@ public class HelloGrain : Grain, IHello
     public Task<string> SayHello(string greeting)
     {
         _log.LogInformation("{GrainMethod} received message: {Greeting}", nameof(SayHello), greeting);
-        return Task.FromResult($"Client said: {greeting}, so {nameof(HelloGrain)} says: Hello!");
+        return Task.FromResult("Hello, World");
     }
 }
