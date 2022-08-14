@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiduske.OrleansDemo.GrainI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiduske.OrleansDemo.Grains", "src\Chiduske.OrleansDemo.Grains\Chiduske.OrleansDemo.Grains.csproj", "{523D3BEA-D670-4839-895E-96BE03DE01F9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3E27E71B-39C1-4DC9-B586-2E1B3F0D1295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chiduske.OrleansDemo.Tests", "src\Chiduske.OrleansDemo.Tests\Chiduske.OrleansDemo.Tests.csproj", "{26E3587C-08C2-44E7-9641-F50B8BFF722F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{523D3BEA-D670-4839-895E-96BE03DE01F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{523D3BEA-D670-4839-895E-96BE03DE01F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{523D3BEA-D670-4839-895E-96BE03DE01F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E3587C-08C2-44E7-9641-F50B8BFF722F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E3587C-08C2-44E7-9641-F50B8BFF722F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E3587C-08C2-44E7-9641-F50B8BFF722F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E3587C-08C2-44E7-9641-F50B8BFF722F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26E3587C-08C2-44E7-9641-F50B8BFF722F} = {3E27E71B-39C1-4DC9-B586-2E1B3F0D1295}
 	EndGlobalSection
 EndGlobal
